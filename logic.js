@@ -19,6 +19,9 @@ function play(userChoice){
     computerChoice = "scissors";
   }
   game_result = compare(userChoice, computerChoice);
+  document.getElementById("compChoice").innerHTML = computerChoice;
+  document.getElementById("user").innerHTML = userChoice;
+  document.getElementById("gameResult").innerHTML = game_result;
 }
 
 
