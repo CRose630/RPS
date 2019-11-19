@@ -47,6 +47,7 @@ var compare = function(choice1, choice2){
     else {
       return "Scissors wins!";
     }
+  }
     else {
       if(choice2 === "paper") {
         return "Scissors wins!";
