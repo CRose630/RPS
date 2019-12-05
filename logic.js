@@ -10,13 +10,13 @@ var game_result;
 function play(userChoice){
   var computerChoice = Math.random();
   if(computerChoice < 0.34) {
-    computerChoice = "rock";
+    computerChoice = "Rock";
   }
   else if(computerChoice < 0.67) {
-    computerChoice = "paper";
+    computerChoice = "Paper";
   }
   else {
-    computerChoice = "scissors";
+    computerChoice = "Scissors";
   }
   game_result = compare(userChoice, computerChoice);
   document.getElementById("compChoice").innerHTML = computerChoice;
@@ -32,7 +32,7 @@ var compare = function(choice1, choice2){
   if(choice1 === choice2) {
     return "The result is a tie!";
   }
-  else if(choice1 === "rock") {
+  else if(choice1 === "Rock") {
     if(choice2 === "scissors") {
       return "Rock wins!";
     }
@@ -40,8 +40,8 @@ var compare = function(choice1, choice2){
       return "Paper wins!";
     }
   }
-  else if(choice1 === "paper") {
-    if(choice2 === "rock") {
+  else if(choice1 === "Paper") {
+    if(choice2 === "Rock") {
       return "Paper wins!";
     }
     else {
@@ -49,7 +49,7 @@ var compare = function(choice1, choice2){
     }
   }
     else {
-      if(choice2 === "paper") {
+      if(choice2 === "Paper") {
         return "Scissors wins!";
       }
       else {
