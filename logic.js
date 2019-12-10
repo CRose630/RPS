@@ -3,7 +3,10 @@
 //then compare it to that of the user. The users choice will be found through element id from the html.
 //In order to compare the results, we will have to make a funciton "compare" which will establish and respond with
 //the winner. This compare function will be below the play function.
-
+const userScore = 0;
+const computerScore = 0;
+const userScore_span = document.getElementById("user-score");
+const computerScore_span = document.getElementById("computer-score");
 
 //this is where we will find the computers choice and compare it to the users.
 var game_result;
@@ -33,27 +36,27 @@ var compare = function(choice1, choice2){
     return "The result is a tie!";
   }
   else if(choice1 === "Rock") {
-    if(choice2 === "scissors") {
-      return "Rock wins!";
+    if(choice2 === "Scissors") {
+      return "Rock beats Scissors, you Win!";
     }
     else {
-      return "Paper wins!";
+      return "Paper beats Rock, computer wins!";
     }
   }
   else if(choice1 === "Paper") {
     if(choice2 === "Rock") {
-      return "Paper wins!";
+      return "Paper beats Rock, you win!";
     }
     else {
-      return "Scissors wins!";
+      return "Scissors beats Paper, computer wins!";
     }
   }
     else {
       if(choice2 === "Paper") {
-        return "Scissors wins!";
+        return "Scissors beats Paper, you win!";
       }
       else {
-        return "Rock wins!";
+        return "Rock beats Scissors, computer wins!";
       }
   }
 
